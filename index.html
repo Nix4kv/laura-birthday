@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Happy Birthday, Laura! — from the EHCNYC Family</title>
+<meta name="description" content="A little something from the EHCNYC Family, counting down to Laura's birthday." />
+<meta name="theme-color" content="#092E39" />
+<!-- Personal page: keep it out of search results. Anyone with the link can
+     still open it — this only stops it being indexed and found by strangers. -->
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+
+<!-- Social / link preview. After deploying, replace the two URLs below with
+     the full https:// address so WhatsApp, iMessage and Slack can find the
+     image (some scrapers will not resolve a relative og:image). -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Happy Birthday, Laura!" />
+<meta property="og:description" content="A little something from the EHCNYC Family." />
+<meta property="og:image"       content="assets/og-image.png" />
+<meta property="og:image:width"  content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url"         content="" />
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="Happy Birthday, Laura!" />
+<meta name="twitter:description" content="A little something from the EHCNYC Family." />
+<meta name="twitter:image"       content="assets/og-image.png" />
+
+<!-- Fonts are self-hosted: no third-party request, works offline. -->
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/fraunces-italic-var-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/fonts.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+<!--
+  Shared SVG paint definitions. Declared ONCE here so every cloned vial
+  can reference the same gradients by id without duplicating ids in the DOM.
+-->
+<svg class="svg-defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <linearGradient id="v-glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#FFFFFF" stop-opacity=".46"/>
+      <stop offset=".16"  stop-color="#FFFFFF" stop-opacity=".14"/>
+      <stop offset=".55"  stop-color="#8BCBDD" stop-opacity=".10"/>
+      <stop offset=".84"  stop-color="#092E39" stop-opacity=".30"/>
+      <stop offset="1"    stop-color="#FFFFFF" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="v-liquid" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#BFE4EE" stop-opacity=".78"/>
+      <stop offset=".35" stop-color="#8BCBDD" stop-opacity=".62"/>
+      <stop offset=".8"  stop-color="#4E9DB4" stop-opacity=".60"/>
+      <stop offset="1"   stop-color="#092E39" stop-opacity=".42"/>
+    </linearGradient>
+    <linearGradient id="v-cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"    stop-color="#0C3A47"/>
+      <stop offset=".18"  stop-color="#4E8FA3"/>
+      <stop offset=".34"  stop-color="#DCEFF5"/>
+      <stop offset=".46"  stop-color="#FFFFFF"/>
+      <stop offset=".62"  stop-color="#8BCBDD"/>
+      <stop offset=".84"  stop-color="#124554"/>
+      <stop offset="1"    stop-color="#092E39"/>
+    </linearGradient>
+    <linearGradient id="v-label" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#FFFFFF" stop-opacity=".97"/>
+      <stop offset=".62" stop-color="#F4FBFD" stop-opacity=".93"/>
+      <stop offset="1"   stop-color="#CFE6EE" stop-opacity=".86"/>
+    </linearGradient>
+    <clipPath id="v-clip" clipPathUnits="userSpaceOnUse">
+      <rect x="6" y="20" width="32" height="78" rx="7"/>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- ══════════════════════════ LOADING VEIL ══════════════════════════ -->
+<div id="loader" class="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <div class="badge badge--lg loader__badge">
+      <img src="assets/logo.png" alt="EHCNYC — Elite Health Center NYC" />
+    </div>
+    <p class="loader__text">Preparing something special<span class="loader__dots"><i>.</i><i>.</i><i>.</i></span></p>
+    <div class="loader__rail"><div class="loader__fill" id="loader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════ BACKGROUND STACK ══════════════════════════ -->
+<div class="bg" aria-hidden="true">
+  <div class="bg__base"></div>
+  <div class="bg__grid" data-parallax="6"></div>
+  <div class="bg__orb bg__orb--a" data-parallax="26"></div>
+  <div class="bg__orb bg__orb--b" data-parallax="16"></div>
+  <div class="bg__orb bg__orb--c" data-parallax="34"></div>
+  <div class="bg__light" id="bg-light"></div>
+  <div class="bg__noise"></div>
+  <div class="bg__shapes" id="shapes" data-parallax="12"></div>
+</div>
+
+<!-- ══════════════════════════ HEADER ══════════════════════════ -->
+<header class="site-header">
+  <a class="badge badge--sm" href="#hero" aria-label="EHCNYC — Elite Health Center NYC, back to top">
+    <img src="assets/logo.png" alt="EHCNYC — Elite Health Center NYC" />
+  </a>
+</header>
+
+<main id="main">
+
+  <!-- ═══════════ SECTION 1 — COUNTDOWN HERO ═══════════ -->
+  <section id="hero" class="section section--hero">
+    <div class="hero__stage">
+
+      <div class="hero__card glass" id="hero-card">
+        <div class="glass__sheen" aria-hidden="true"></div>
+
+        <p class="hero__eyebrow" data-letters>Something Special Is Coming...</p>
+
+        <h1 class="hero__title">
+          <span class="hero__title-script">Laura&rsquo;s</span>
+          <span class="hero__title-strong">Birthday</span>
+        </h1>
+
+        <div class="hero__rule" aria-hidden="true"><i></i><span></span><i></i></div>
+
+        <!-- flip clock -->
+        <div class="clock" id="clock" aria-hidden="true">
+          <div class="flip-unit" data-unit="days">
+            <div class="flip">
+              <div class="flip-face flip-face--top"><span>00</span></div>
+              <div class="flip-face flip-face--bottom"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--front"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--back"><span>00</span></div>
+            </div>
+            <div class="flip-label">Days</div>
+          </div>
+          <div class="flip-sep"><i></i><i></i></div>
+          <div class="flip-unit" data-unit="hours">
+            <div class="flip">
+              <div class="flip-face flip-face--top"><span>00</span></div>
+              <div class="flip-face flip-face--bottom"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--front"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--back"><span>00</span></div>
+            </div>
+            <div class="flip-label">Hours</div>
+          </div>
+          <div class="flip-sep"><i></i><i></i></div>
+          <div class="flip-unit" data-unit="minutes">
+            <div class="flip">
+              <div class="flip-face flip-face--top"><span>00</span></div>
+              <div class="flip-face flip-face--bottom"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--front"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--back"><span>00</span></div>
+            </div>
+            <div class="flip-label">Minutes</div>
+          </div>
+          <div class="flip-sep"><i></i><i></i></div>
+          <div class="flip-unit flip-unit--sec" data-unit="seconds">
+            <div class="flip">
+              <div class="flip-face flip-face--top"><span>00</span></div>
+              <div class="flip-face flip-face--bottom"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--front"><span>00</span></div>
+              <div class="flip-leaf flip-leaf--back"><span>00</span></div>
+            </div>
+            <div class="flip-label">Seconds</div>
+          </div>
+        </div>
+
+        <p class="clock-anchor" id="clock-anchor">Midnight, New York time</p>
+
+        <p class="sr-only" id="clock-sr" aria-live="polite"></p>
+
+        <!-- party-mode replacement for the clock -->
+        <div class="hero__party" id="hero-party" hidden>
+          <p class="hero__party-kicker">The wait is over</p>
+          <p class="hero__party-title">It&rsquo;s Laura&rsquo;s Birthday</p>
+          <button class="btn btn--ghost" type="button" id="replay-celebration">Replay the celebration ✨</button>
+        </div>
+
+      </div>
+
+      <a class="scroll-cue" href="#card-section" aria-label="Scroll to the birthday card">
+        <span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 2 — INTERACTIVE BIRTHDAY CARD ═══════════ -->
+  <section id="card-section" class="section">
+    <div class="wrap">
+      <p class="kicker reveal">A Little Surprise For You...</p>
+
+      <div class="card3d" id="card3d">
+        <div class="card3d__stage">
+
+          <div class="card3d__inside">
+            <div class="card3d__inside-glow" aria-hidden="true"></div>
+            <div class="card3d__inside-body">
+              <p class="card3d__hb">Happy Birthday, Laura! <span aria-hidden="true">🎉</span></p>
+              <p class="card3d__msg">Wishing you a wonderful birthday filled with happiness, laughter, and beautiful moments.</p>
+
+              <p class="card3d__signed">signed,</p>
+              <ul class="signatures">
+                <li class="signature" style="--rot:-3.5deg; --sz:1.06em;">Gennady</li>
+                <li class="signature" style="--rot:2.5deg;  --sz:.98em;">Nixie</li>
+                <li class="signature" style="--rot:-1.5deg; --sz:1.1em;">Ed</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card3d__cover" id="card-cover">
+            <div class="card3d__cover-face card3d__cover-front">
+              <div class="card3d__foil" aria-hidden="true"></div>
+              <div class="card3d__emboss">
+                <span class="card3d__mono" aria-hidden="true">L</span>
+                <p class="card3d__for">For Laura</p>
+                <p class="card3d__from">from the EHCNYC Family</p>
+              </div>
+              <div class="card3d__seam" aria-hidden="true"></div>
+            </div>
+            <div class="card3d__cover-face card3d__cover-back"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card3d__actions">
+        <button class="btn btn--emboss" type="button" id="open-card" aria-expanded="false" aria-controls="card3d">
+          <span class="btn__label">Open Card</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 3 — MESSAGE WALL ═══════════ -->
+  <section id="messages" class="section">
+    <div class="wrap">
+      <h2 class="h2 reveal">Messages From The <em>EHCNYC Family</em></h2>
+      <p class="sub reveal">A few words from each of us.</p>
+      <div class="note-grid" id="note-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 4 — FROM ALL OF US ═══════════ -->
+  <section id="fromall" class="section section--values">
+    <div class="wrap">
+      <h2 class="h2 h2--3d reveal">A Birthday Message From Your <em>EHCNYC Family</em></h2>
+
+      <ul class="values" id="values">
+        <li class="value"><span>Transparent.</span></li>
+        <li class="value"><span>Supportive.</span></li>
+        <li class="value"><span>Personal.</span></li>
+      </ul>
+
+      <p class="values__closer reveal">Happy Birthday, Laura! <span aria-hidden="true">❤️</span></p>
+    </div>
+  </section>
+
+  <!-- ═══════════ SECTION 5 — SURPRISE BOX ═══════════ -->
+  <section id="surprise" class="section">
+    <div class="wrap wrap--narrow">
+      <h2 class="h2 reveal">A Box Of <em>Birthday Things</em></h2>
+      <p class="sub reveal">Go on — give it a tap.</p>
+
+      <div class="boxwrap">
+        <button class="box" id="box" type="button" aria-expanded="false" aria-controls="box-reveal"
+                aria-label="Open the birthday surprise box">
+          <div class="box__shadow" aria-hidden="true"></div>
+          <div class="box__cone" aria-hidden="true"></div>
+          <div class="box__body" aria-hidden="true">
+            <div class="box__face box__face--back"></div>
+            <div class="box__face box__face--left"></div>
+            <div class="box__face box__face--right"></div>
+            <div class="box__face box__face--front">
+              <i class="box__ribbon-v"></i>
+            </div>
+            <div class="box__face box__face--bottom"></div>
+            <div class="box__lid">
+              <div class="box__lid-top">
+                <i class="box__ribbon-v"></i>
+                <i class="box__ribbon-h"></i>
+                <span class="box__bow"></span>
+                <div class="box__lid-skirt"></div>
+              </div>
+            </div>
+          </div>
+        </button>
+
+        <div class="box__reveal" id="box-reveal" hidden>
+          <p class="box__reveal-text"><span aria-hidden="true">🎁</span> A little reminder that you&rsquo;re appreciated.</p>
+          <button class="btn btn--ghost" type="button" id="more-surprise">One More Surprise</button>
+          <p class="box__extra" id="box-extra" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="site-footer">
+  <div class="wrap wrap--narrow">
+    <div class="badge badge--md footer__badge">
+      <img src="assets/logo.png" alt="EHCNYC — Elite Health Center NYC" />
+    </div>
+    <p class="footer__hb">Happy Birthday, Laura! <span aria-hidden="true">❤️</span></p>
+    <p class="footer__love">With love, from the EHCNYC Family <span aria-hidden="true">❤️</span></p>
+  </div>
+</footer>
+
+<!-- ══════════════════════════ CELEBRATION OVERLAY ══════════════════════════ -->
+<div class="celebrate" id="celebrate" hidden>
+  <div class="celebrate__burst" aria-hidden="true"></div>
+  <div class="celebrate__inner">
+    <div class="bigtype" aria-hidden="true">
+      <span class="bigtype__word" data-word>Happy</span>
+      <span class="bigtype__word" data-word>Birthday</span>
+    </div>
+    <h2 class="celebrate__h"><span aria-hidden="true">🎉</span> Happy Birthday, Laura! <span aria-hidden="true">🎉</span></h2>
+    <p class="celebrate__p">Today is all about celebrating you.</p>
+    <p class="celebrate__sign">With love, from the EHCNYC Family <span aria-hidden="true">❤️</span></p>
+
+
+    <button class="btn btn--ghost celebrate__dismiss" type="button" id="celebrate-dismiss">Keep exploring ↓</button>
+  </div>
+</div>
+
+<!-- fx layers -->
+<canvas id="fx" class="fx" aria-hidden="true"></canvas>
+<div id="domfx" class="domfx" aria-hidden="true"></div>
+
+
+<!-- ══════════════════════════ TEMPLATES ══════════════════════════ -->
+
+<!-- one reusable 3D glass vial component -->
+<template id="vial-tpl">
+  <div class="vial" data-vial>
+    <div class="vial__inner">
+      <div class="vial__tilt">
+      <svg class="vial__svg" viewBox="0 0 44 104" width="44" height="104" aria-hidden="true" focusable="false">
+        <!-- contact shadow -->
+        <ellipse class="vial__shadow" cx="22" cy="100" rx="15" ry="3.4"/>
+
+        <!-- glass barrel -->
+        <rect x="6" y="20" width="32" height="78" rx="7" fill="url(#v-glass)"/>
+
+        <!-- liquid + meniscus -->
+        <g clip-path="url(#v-clip)">
+          <rect x="6" y="52" width="32" height="46" fill="url(#v-liquid)"/>
+          <ellipse cx="22" cy="52" rx="16" ry="3.2" fill="#DCF1F7" opacity=".55"/>
+          <rect x="6" y="88" width="32" height="10" fill="#092E39" opacity=".16"/>
+        </g>
+
+        <!-- barrel rim -->
+        <rect x="6" y="20" width="32" height="78" rx="7" fill="none" stroke="#FFFFFF" stroke-opacity=".40" stroke-width="1"/>
+        <path d="M8.5 26v66" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round"/>
+
+        <!-- neck + crimped metallic cap -->
+        <rect x="14" y="13" width="16" height="9" rx="2" fill="url(#v-glass)" stroke="#FFFFFF" stroke-opacity=".3" stroke-width=".7"/>
+        <rect x="11" y="4" width="22" height="13" rx="3" fill="url(#v-cap)"/>
+        <rect x="11" y="8.4" width="22" height="1.1" fill="#092E39" opacity=".38"/>
+        <rect x="11" y="12.2" width="22" height="1.1" fill="#092E39" opacity=".3"/>
+        <ellipse cx="22" cy="4.6" rx="11" ry="2.5" fill="#CFE7EF"/>
+        <ellipse cx="22" cy="4.4" rx="6.4" ry="1.4" fill="#F7FDFF" opacity=".9"/>
+
+        <!-- label -->
+        <rect x="6" y="45" width="32" height="30" fill="url(#v-label)"/>
+        <rect x="6" y="45" width="32" height="30" fill="none" stroke="#092E39" stroke-opacity=".10"/>
+        <text class="vial__name" x="22" y="57" text-anchor="middle" data-vial-label>Tirzepatide</text>
+        <rect x="11" y="61" width="22" height="1" fill="#8BCBDD" opacity=".85"/>
+        <rect x="13" y="65" width="18" height="1.4" fill="#092E39" opacity=".16"/>
+        <rect x="15" y="68.6" width="14" height="1.4" fill="#092E39" opacity=".12"/>
+
+        <!-- specular highlights -->
+        <rect class="vial__spec" x="10.5" y="24" width="3.4" height="70" rx="1.7" fill="#FFFFFF" opacity=".5"/>
+        <rect x="31" y="26" width="1.8" height="66" rx="0.9" fill="#FFFFFF" opacity=".22"/>
+        <ellipse cx="16" cy="7" rx="3.6" ry="1.5" fill="#FFFFFF" opacity=".8"/>
+        <rect class="vial__shine" x="-16" y="16" width="12" height="86" rx="6" fill="#FFFFFF" opacity=".26"/>
+      </svg>
+      </div>
+      <span class="vial__tip" data-vial-tip>Tirzepatide</span>
+      <span class="vial__egg" data-vial-egg aria-hidden="true">A little EHCNYC touch ✨</span>
+    </div>
+  </div>
+</template>
+
+<!-- one reusable written-note card -->
+<template id="note-tpl">
+  <article class="note">
+    <div class="note__sheen" aria-hidden="true"></div>
+
+    <svg class="note__quote" viewBox="0 0 32 24" aria-hidden="true">
+      <path d="M13.4 0C6.1 2.2 1 8.6 1 16.1 1 20.7 3.8 24 7.7 24c3.4 0 6-2.5 6-5.9 0-3.3-2.3-5.7-5.4-5.7-.6 0-1.4.1-1.6.2-.2 0-.3 0-.3-.2 0-2.4 2.9-6.2 6.6-8.2.5-.3.7-.5.7-.8 0-.4-.3-.8-.7-1.2-.4-.3-.8-.4-1-.2zM30.4 0C23.1 2.2 18 8.6 18 16.1 18 20.7 20.8 24 24.7 24c3.4 0 6-2.5 6-5.9 0-3.3-2.3-5.7-5.4-5.7-.6 0-1.4.1-1.6.2-.2 0-.3 0-.3-.2 0-2.4 2.9-6.2 6.6-8.2.5-.3.7-.5.7-.8 0-.4-.3-.8-.7-1.2-.4-.3-.8-.4-1-.2z"/>
+    </svg>
+
+    <blockquote class="note__body" data-message></blockquote>
+
+    <div class="note__rule" aria-hidden="true"></div>
+
+    <footer class="note__from">
+      <span class="note__avatar" aria-hidden="true" data-initial>G</span>
+      <h3 class="note__name" data-name>Gennady</h3>
+    </footer>
+  </article>
+</template>
+
+<script src="js/script.js"></script>
+</body>
+</html>

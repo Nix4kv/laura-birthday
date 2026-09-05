@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../css/fonts.css" />
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    display: grid; place-items: center;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background:
+      radial-gradient(70% 60% at 50% 6%,  rgba(139,203,221,.24) 0%, transparent 62%),
+      radial-gradient(90% 70% at 12% 96%, rgba(27,85,104,.5) 0%, transparent 64%),
+      linear-gradient(168deg, #0D3A47 0%, #061F27 58%, #04161C 100%);
+    color: #fff;
+  }
+  .wrap { position: relative; display: grid; justify-items: center; gap: 26px; text-align: center; }
+  .grid {
+    position: absolute; inset: -400px;
+    background-image:
+      linear-gradient(rgba(139,203,221,.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139,203,221,.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(60% 55% at 50% 45%, #000 0%, transparent 78%);
+            mask-image: radial-gradient(60% 55% at 50% 45%, #000 0%, transparent 78%);
+  }
+  .badge {
+    position: relative;
+    background: linear-gradient(170deg, #fff 0%, #fff 55%, #eef7fa 100%);
+    border-radius: 16px; padding: 12px 16px; width: 190px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 -2px 6px rgba(9,46,57,.1) inset,
+                0 16px 36px -10px rgba(3,16,21,.75);
+  }
+  .badge img { width: 100%; display: block; }
+  .eyebrow {
+    position: relative;
+    font-size: 17px; font-weight: 600; letter-spacing: .34em;
+    text-transform: uppercase; color: #8BCBDD;
+  }
+  .title {
+    position: relative;
+    font-family: Fraunces, Georgia, serif; font-style: italic; font-weight: 400;
+    font-size: 104px; line-height: 1; letter-spacing: -.01em;
+    text-shadow: 0 14px 40px rgba(3,16,21,.65);
+  }
+  .rule { position: relative; display: flex; align-items: center; gap: 14px; }
+  .rule i { height: 1px; width: 150px; background: linear-gradient(90deg, transparent, rgba(139,203,221,.55)); }
+  .rule i:last-child { background: linear-gradient(90deg, rgba(139,203,221,.55), transparent); }
+  .rule span { width: 7px; height: 7px; border-radius: 50%; background: #8BCBDD; box-shadow: 0 0 14px #8BCBDD; }
+  .from { position: relative; font-size: 22px; color: rgba(219,240,246,.8); letter-spacing: .02em; }</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="wrap">
+
+    <div class="badge"><img src="../assets/logo.png" alt="EHCNYC" /></div>
+    <p class="eyebrow">Something Special Is Coming</p>
+    <h1 class="title">Happy Birthday, Laura!</h1>
+    <div class="rule"><i></i><span></span><i></i></div>
+    <p class="from">With love, from the EHCNYC Family</p>
+  </div>
+</body>
+</html>
