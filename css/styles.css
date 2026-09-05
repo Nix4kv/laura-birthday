@@ -792,6 +792,10 @@ body.is-ready .bg__light { opacity: 1; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1rem, 2vw, 1.4rem);
+  /* Each note sizes to its own text. Stretching them to a shared height
+     leaves big holes under the shorter messages, which reads as broken
+     rather than generous — these are notes of different lengths. */
+  align-items: start;
   perspective: 1200px;
 }
 

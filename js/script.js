@@ -46,9 +46,13 @@
       name: 'Nixie', initial: 'N',
       message: 'Happy Birthday, Boss Laura!\n' +
                'Thank you so much for everything, boss. Working with you has been such a ' +
-               'gift, and I will be forever grateful for it. I love you so much boss and I ' +
+               'gift, and I will be forever grateful for it. I wish you all the best boss ' +
+               'and I pray to God to bless you and your family. I pray to God to protect ' +
+               'you and give you a healthy life away from sickness and lastly more ' +
+               'happiness and love from God, Family and friends. I love you so much boss ' +
+               'Laura! You are my Boss, Mother that has a special place in my heart and I ' +
                'promise to keep growing and doing even better alongside you. Enjoy your ' +
-               'day, boss. I love you!'
+               'day, boss. I love you always!'
     },
     {
       name: 'Ed', initial: 'E',
